@@ -34,7 +34,7 @@ First, draw 5 regression lines randomly from the defined prior distribution. Sin
 
 Next, the posterior distribution is calculated using the observed data, and the results are randomly sampled. You can see that it follows the data.
 
-![fig2](./example/img/1dim_linear_sampling_posterior.png)
+![fig3](./example/img/1dim_linear_sampling_posterior.png)
 
 In the code, write as follows. mu, S, beta are prior distribution parameters.The part that draws the line is omitted.
 
@@ -57,7 +57,7 @@ The forecast distribution is calculated by the formula below.
 
 It is a diagram with the predicted distribution on the horizontal axis. The light blue color represents one sigma.
 
-![fig3](./example/img/1dim_linear_predict.png)
+![fig4](./example/img/1dim_linear_predict.png)
 
 ## Example (Polynomial)
 
@@ -65,11 +65,11 @@ Let's do a polynomial regression that is exactly the same as the Example(linear)
 
 Sampling from the prior distribution draws random polynomial lines. In the sample, it is a third-order polynomial.
 
-![fig4](./example/img/1dim_poly_sampling_prior.png)
+![fig5](./example/img/1dim_poly_sampling_prior.png)
 
 It can be seen that the fit to the data is good after the posterior distribution calculation.
-![fig5](./example/img/1dim_poly_sampling_posterior.png)
-![fig6](./example/img/1dim_poly_predict.png)
+![fig6](./example/img/1dim_poly_sampling_posterior.png)
+![fig7](./example/img/1dim_poly_predict.png)
 
 ## Example (multi dimension)
 
@@ -77,9 +77,9 @@ Finally, a two-dimensional regression is performed. The procedure is exactly the
 
 The input data is still an advertising dataset, but we are increasing radio as an input dimension.
 
-![fig7](./example/img/2dim_input.png)
+![fig8](./example/img/2dim_input.png)
 
 Regress the 2D plane. Just as before, a random plane is sampled before learning, but a good plane is obtained after learning.
 
-![fig8](./example/img/2dim_linear_sampling_prior.png)
-![fig9](./example/img/2dim_linear_sampling_posterior.png)
+![fig9](./example/img/2dim_linear_sampling_prior.png)
+![fig10](./example/img/2dim_linear_sampling_posterior.png)
