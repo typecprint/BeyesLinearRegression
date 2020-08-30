@@ -3,8 +3,8 @@
 ## Features
 
 - Calculate posterior using data
-- Post-event random sampling
-- Works with multi-dimensional or single-dimensional input dimensions.
+- Random sampling from posterior distribution
+- Works with multi-dimensional or single-dimensional input dimensions
 
 ## Motivation
 
@@ -36,7 +36,7 @@ Next, the posterior distribution is calculated using the observed data, and the 
 
 ![fig3](./example/img/1dim_linear_sampling_posterior.png)
 
-In the code, write as follows. mu, S, beta are prior distribution parameters.The part that draws the line is omitted.
+In the code, write as follows. mu, S, beta are prior distribution parameters. The part that draws the line is omitted.
 
 ```python
 params = beyes_linear_model.sampling_params(n=5)
@@ -50,7 +50,7 @@ draw lines()
 
 ### predictive distribution
 
-The forecast distribution is calculated by the formula below.
+The predictive distribution is calculated by the formula below.
 
 - <img src="https://latex.codecogs.com/gif.latex?m_N^T\phi(x)"/>
 - <img src="https://latex.codecogs.com/gif.latex?1/\beta&plus;\phi(x)S_N\phi(x)"/>
@@ -61,9 +61,9 @@ It is a diagram with the predicted distribution on the horizontal axis. The ligh
 
 ## Example (Polynomial)
 
-Let's do a polynomial regression that is exactly the same as the Example(linear) example.
+Let's do a polynomial regression that is exactly the same as the Example(linear).
 
-Sampling from the prior distribution draws random polynomial lines. In the sample, it is a third-order polynomial.
+Sampling from the prior distribution draws random polynomial lines. In this sample, it is a third-order polynomial.
 
 ![fig5](./example/img/1dim_poly_sampling_prior.png)
 
@@ -73,7 +73,7 @@ It can be seen that the fit to the data is good after the posterior distribution
 
 ## Example (multi dimension)
 
-Finally, a two-dimensional regression is performed. The procedure is exactly the same as the previous sample.
+Finally, let's run a 2D regression. The procedure is exactly the same as the previous sample.
 
 The input data is still an advertising dataset, but we are increasing radio as an input dimension.
 
